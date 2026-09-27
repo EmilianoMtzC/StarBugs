@@ -35,8 +35,7 @@ src/
 │   ├── GestorTareas.java                 # Coordina las operaciones del sistema
 │   ├── Entidades/                        # Comandas, baristas y estados
 │   ├── EstructurasDatos/                 # Cola, árbol, tabla hash y grafo
-│   ├── Algoritmos/                       # Ordenamiento, estadísticas y distribución
-│   └── PruebasSistema.java               # Pruebas ejecutables del proyecto
+│   └── Algoritmos/                       # Ordenamiento, estadísticas y distribución
 └── resources/styles/styles.css           # Estilos de la interfaz
 ```
 
