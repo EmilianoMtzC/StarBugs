@@ -59,3 +59,5 @@ gradle run
 - La prioridad va del 1 al 5; 5 representa la más urgente.
 - Los tiempos de preparación se capturan en minutos. La capacidad semanal del barista se indica en horas en la interfaz y se convierte a minutos internamente.
 - Los folios se generan automáticamente, por ejemplo `C-001` para comandas y `B-001` para baristas.
+
+>>>>>>> StarBugs
