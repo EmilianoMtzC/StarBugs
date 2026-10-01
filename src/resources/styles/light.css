@@ -1,0 +1,165 @@
+/* StarBugs claro: crema, superficies blancas y verde de cafetería.
+   Se carga después del tema base para conservar la composición de las vistas. */
+.root {
+    -fx-base: #F3F1EA;
+    -fx-background: #F3F1EA;
+    -fx-control-inner-background: #FFFFFF;
+    -fx-accent: #00754A;
+    -fx-focus-color: #00754A;
+    -fx-faint-focus-color: rgba(0, 117, 74, 0.15);
+}
+
+.root, .app-cafeteria, .area-contenido, .contenido-principal,
+.contenedor-desplazable, .contenedor-desplazable > .viewport,
+.contenedor-desplazable > .corner, .tab-pane {
+    -fx-background-color: #F3F1EA;
+    -fx-text-fill: #1E3932;
+}
+
+.encabezado-cafeteria {
+    -fx-background-color: #FFFCF7;
+    -fx-border-color: transparent transparent #D6DFD5 transparent;
+}
+
+.titulo-vista, .titulo-pagina, .encabezado-seccion, .valor-metrica, .label {
+    -fx-text-fill: #1E3932;
+}
+
+.subtitulo-vista, .texto-suave, .detalle-metrica,
+.tarjeta-metrica .detalle-metrica {
+    -fx-text-fill: #52695E;
+}
+
+.etiqueta-campo, .etiqueta-metrica, .tarjeta-metrica .etiqueta-metrica {
+    -fx-text-fill: #006241;
+}
+
+.indicador-turno, .codigo-comanda {
+    -fx-background-color: #D4E9E2;
+    -fx-text-fill: #006241;
+}
+
+.barra-lateral {
+    -fx-background-color: #1E3932;
+    -fx-border-color: transparent #29483B transparent transparent;
+}
+
+.barra-lateral .marca-cafeteria { -fx-text-fill: #FFFFFF; }
+.barra-lateral .descripcion-marca, .barra-lateral .nota-lateral {
+    -fx-text-fill: #D4E9E2;
+}
+.barra-lateral .nota-lateral {
+    -fx-border-color: #477564 transparent transparent transparent;
+}
+.barra-lateral .boton-navegacion { -fx-text-fill: #F1F8F4; }
+.barra-lateral .boton-navegacion:hover { -fx-background-color: #2D564A; }
+.barra-lateral .boton-navegacion.activo { -fx-background-color: #00754A; }
+
+.tarjeta, .tarjeta-metrica, .formulario-comanda, .panel-actualizacion,
+.panel-listado, .formulario-minimalista, .panel-resultados-minimalista,
+.tab-pane > .tab-content-area {
+    -fx-background-color: #FFFCF7;
+    -fx-border-color: #D6DFD5;
+    -fx-effect: dropshadow(three-pass-box, rgba(30, 57, 50, 0.08), 12, 0, 0, 3);
+}
+
+.text-field, .combo-box, .date-picker, .text-area, .text-area .content,
+.formulario-comanda .combo-box, .formulario-comanda .text-field,
+.formulario-comanda .date-picker, .panel-actualizacion .combo-box,
+.panel-listado .combo-box, .formulario-minimalista .combo-box,
+.formulario-minimalista .text-field, .panel-listado .text-area,
+.panel-listado .text-area .content, .panel-resultados-minimalista .text-area,
+.panel-resultados-minimalista .text-area .content {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #B8CFC2;
+    -fx-text-fill: #1E3932;
+    -fx-prompt-text-fill: #61756B;
+    -fx-highlight-fill: #D4E9E2;
+    -fx-highlight-text-fill: #1E3932;
+}
+
+.combo-box:hover, .formulario-comanda .combo-box:hover,
+.panel-actualizacion .combo-box:hover, .panel-listado .combo-box:hover,
+.formulario-minimalista .combo-box:hover { -fx-background-color: #F0F7F2; }
+
+.text-field:focused, .combo-box:focused, .date-picker:focused,
+.formulario-comanda .text-field:focused, .formulario-comanda .combo-box:focused,
+.formulario-comanda .date-picker:focused, .panel-actualizacion .combo-box:focused,
+.panel-listado .combo-box:focused, .formulario-minimalista .combo-box:focused,
+.formulario-minimalista .text-field:focused { -fx-border-color: #00754A; }
+
+.combo-box .list-cell, .date-picker .text-field,
+.formulario-comanda .combo-box .list-cell, .panel-actualizacion .combo-box .list-cell,
+.panel-listado .combo-box .list-cell, .formulario-minimalista .combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E3932;
+}
+
+.text-area .text, .panel-listado .text-area .text,
+.panel-resultados-minimalista .text-area .text { -fx-fill: #1E3932; }
+
+.combo-box .arrow, .date-picker .arrow,
+.formulario-comanda .combo-box .arrow, .panel-actualizacion .combo-box .arrow,
+.panel-listado .combo-box .arrow, .formulario-minimalista .combo-box .arrow {
+    -fx-background-color: #006241;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #FFFCF7;
+    -fx-border-color: #B8CFC2;
+    -fx-effect: dropshadow(three-pass-box, rgba(30, 57, 50, 0.15), 12, 0, 0, 4);
+}
+.combo-box-popup .list-cell { -fx-text-fill: #1E3932; }
+.combo-box-popup .list-cell:filled:hover,
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #D4E9E2;
+    -fx-text-fill: #006241;
+}
+
+.button, .boton-miel, .boton-accion, .formulario-comanda .button,
+.pagina-comandas .button, .formulario-minimalista .button, .pagina-minimalista .button {
+    -fx-background-color: #006241;
+    -fx-text-fill: #FFFFFF;
+}
+.button:hover, .boton-miel:hover, .boton-accion:hover, .formulario-comanda .button:hover,
+.pagina-comandas .button:hover, .formulario-minimalista .button:hover,
+.pagina-minimalista .button:hover { -fx-background-color: #00754A; }
+.button:pressed { -fx-background-color: #004F34; }
+
+.boton-secundario, .boton-accion.activo, .boton-accion.activo:hover {
+    -fx-background-color: #D4E9E2;
+    -fx-text-fill: #006241;
+    -fx-effect: none;
+}
+.boton-secundario:hover { -fx-background-color: #B7D7C8; }
+
+.boton-tema, .boton-tema:selected {
+    -fx-background-color: #D4E9E2;
+    -fx-border-color: #A8C9B8;
+    -fx-text-fill: #006241;
+}
+.boton-tema:hover { -fx-background-color: #B7D7C8; }
+.boton-tema:focused { -fx-border-color: #006241; }
+
+.barra-capacidad .track { -fx-background-color: #DCEBE3; }
+.barra-capacidad .bar { -fx-background-color: #00754A; }
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb,
+.contenedor-desplazable .scroll-bar .thumb { -fx-background-color: #91B6A0; }
+.scroll-bar:vertical .track, .scroll-bar:horizontal .track {
+    -fx-background-color: #E5EBE3;
+}
+
+/* El calendario emergente también conserva la paleta clara. */
+.date-picker-popup {
+    -fx-background-color: #FFFCF7;
+    -fx-border-color: #B8CFC2;
+}
+.date-picker-popup > .month-year-pane { -fx-background-color: #D4E9E2; }
+.date-picker-popup .day-cell { -fx-background-color: #FFFFFF; -fx-text-fill: #1E3932; }
+.date-picker-popup .day-cell:hover, .date-picker-popup .selected {
+    -fx-background-color: #D4E9E2;
+    -fx-text-fill: #006241;
+}
+.date-picker-popup .previous-month, .date-picker-popup .next-month {
+    -fx-text-fill: #697D72;
+}

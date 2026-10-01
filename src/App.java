@@ -18,6 +18,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.HBox;
@@ -57,19 +59,23 @@ public class App extends Application {
 
         Label tituloVista = new Label(nombres.getFirst());
         tituloVista.getStyleClass().add("titulo-vista");
-        Label subtitulo = new Label("Operación diaria · Coffeehouse nocturno");
+        Label subtitulo = new Label("Operación diaria · StarBugs coffeehouse");
         subtitulo.getStyleClass().add("subtitulo-vista");
         VBox titulos = new VBox(2, tituloVista, subtitulo);
         Region separador = new Region();
         HBox.setHgrow(separador, Priority.ALWAYS);
         Label turno = new Label("● Turno activo");
         turno.getStyleClass().add("indicador-turno");
-        HBox encabezado = new HBox(16, titulos, separador, turno);
+        ToggleButton tema = new ToggleButton("☀ Modo claro");
+        tema.getStyleClass().add("boton-tema");
+        tema.setTooltip(new Tooltip("Alternar entre modo claro y modo oscuro"));
+        tema.setAccessibleText("Activar modo claro");
+        HBox encabezado = new HBox(16, titulos, separador, tema, turno);
         encabezado.getStyleClass().add("encabezado-cafeteria");
 
         Label marca = new Label("StarBugs");
         marca.getStyleClass().add("marca-cafeteria");
-        Label descripcion = new Label("Night coffeehouse operations");
+        Label descripcion = new Label("Coffeehouse operations");
         descripcion.getStyleClass().add("descripcion-marca");
         VBox navegacion = new VBox(8, marca, descripcion);
         navegacion.getStyleClass().add("barra-lateral");
@@ -107,6 +113,16 @@ public class App extends Application {
         scene.getStylesheets().add(
                 App.class.getResource("/styles/styles.css").toExternalForm()
         );
+        String temaClaro = App.class.getResource("/styles/light.css").toExternalForm();
+        tema.setOnAction(evento -> {
+            if (tema.isSelected()) {
+                scene.getStylesheets().add(temaClaro);
+            } else {
+                scene.getStylesheets().remove(temaClaro);
+            }
+            tema.setText(tema.isSelected() ? "☾ Modo oscuro" : "☀ Modo claro");
+            tema.setAccessibleText(tema.isSelected() ? "Activar modo oscuro" : "Activar modo claro");
+        });
         stage.setTitle("Gestor de tareas");
         stage.setScene(scene);
         stage.show();

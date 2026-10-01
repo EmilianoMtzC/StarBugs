@@ -1,0 +1,9 @@
+Para cerrar, presento lo que dejó StarBugs. El avance comenzó como una cafetería didáctica con fila de clientes, historial de compras e inventario. En el proyecto final amplié ese punto de partida para organizar comandas, baristas y preparaciones durante el turno.
+
+Durante el curso apliqué buenas prácticas que ayudan a mantener el trabajo claro: separar la interfaz de la lógica, usar nombres ligados al dominio, validar los datos de entrada y conservar los cambios mediante commits. También ejecuté escenarios pequeños para revisar prioridad, búsquedas, capacidad, estados y dependencias antes de presentar resultados.
+
+Las estrategias finales siguen un ciclo. Primero se registra la comanda; después se prioriza por urgencia y fecha. La asignación busca una estación compatible y considera la carga disponible. El grafo respeta los prerrequisitos de preparación, y las estadísticas resumen el turno. Las estructuras trabajan juntas para apoyar cada decisión.
+
+El impacto potencial es reducir esperas, distribuir mejor la carga y evitar iniciar una tarea fuera de orden. Aún no se midieron turnos reales. Para comprobarlo registraría el tiempo hasta el inicio, las entregas a tiempo, la carga por barista y las comandas que queden sin asignar.
+
+El verificador completó veintitrés comprobaciones en seis grupos y la aplicación ofrece cinco vistas. No recibí retroalimentación docente previa, así que no atribuyo cambios a comentarios inexistentes. Me llevo habilidades para modelar problemas, elegir estructuras, verificar resultados y comunicar decisiones. En mi ejercicio profesional, estas prácticas ayudan a crear sistemas confiables y útiles. Gracias.

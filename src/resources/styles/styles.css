@@ -1,4 +1,24 @@
 /* Gestor de tareas — estética cálida de cafetería */
+.boton-tema {
+    -fx-background-color: #254C3D;
+    -fx-background-radius: 20;
+    -fx-border-color: #598574;
+    -fx-border-radius: 20;
+    -fx-text-fill: #E8F4EC;
+    -fx-padding: 8 14;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.boton-tema:hover {
+    -fx-background-color: #35634F;
+}
+
+.boton-tema:focused {
+    -fx-border-color: #B7D7C8;
+}
+
 .root {
     -fx-font-family: "Segoe UI", "Arial", sans-serif;
     -fx-background-color: #F6EEE5;

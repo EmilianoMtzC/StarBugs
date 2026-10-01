@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Portafolio del proyecto StarBugs</title>
+  <style>
+    @page { size: A4; margin: 18mm 19mm; }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #111; font-size: 11pt; line-height: 1.35; margin: 0; }
+    h1 { font-size: 17pt; text-align: center; margin: 0 0 16mm; font-weight: bold; }
+    h2 { font-size: 12pt; margin: 8mm 0 2mm; }
+    p { margin: 0 0 3mm; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 9mm; }
+    td { border: 1px solid #777; padding: 2.5mm 3mm; width: 50%; vertical-align: top; }
+    ul { margin: 1mm 0 4mm; padding-left: 6mm; }
+    li { margin-bottom: 2mm; }
+    .page { break-after: page; }
+    .page:last-child { break-after: auto; }
+    .caption { font-size: 9pt; margin: 2mm 0 6mm; }
+    .screens { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+    .screens figure { margin: 0; break-inside: avoid; }
+    .screens img { display: block; width: 100%; border: 1px solid #aaa; }
+    .screens figcaption { font-size: 9pt; margin-top: 1.5mm; }
+    .single { width: 50%; margin-top: 7mm; }
+    .small { font-size: 9pt; }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <h1>Portafolio del proyecto StarBugs</h1>
+    <table>
+      <tr><td><b>Nombre:</b> Martínez Ceja Jesús Emiliano</td><td><b>Matrícula:</b> AL07108460</td></tr>
+      <tr><td><b>Curso:</b> Bases de Datos</td><td><b>Profesor:</b> Alberto Trejo</td></tr>
+      <tr><td><b>Actividad:</b> Actividad 5</td><td><b>Fecha:</b> 26/09/2026</td></tr>
+    </table>
+    <h2>Descripción</h2>
+    <p>StarBugs es una aplicación para administrar comandas de una cafetería. Permite registrar tareas, asignarlas a baristas, ordenar las más urgentes y consultar su estado.</p>
+    <h2>Objetivo</h2>
+    <p>Aplicar estructuras de datos y algoritmos de búsqueda y ordenamiento para organizar el trabajo diario de una cafetería.</p>
+    <h2>Estructuras de datos utilizadas</h2>
+    <ul>
+      <li><b>Cola de prioridad:</b> ordena las comandas por urgencia y fecha de entrega.</li>
+      <li><b>Árbol binario:</b> organiza a los baristas por estación.</li>
+      <li><b>Tabla hash:</b> permite consultar comandas y baristas por folio.</li>
+      <li><b>Grafo:</b> registra dependencias entre tareas y ayuda a definir el orden de preparación.</li>
+    </ul>
+    <p class="small"><b>Repositorio:</b> https://github.com/EmilianoMtzC/StarBugs</p>
+  </section>
+
+  <section class="page">
+    <h1>Desarrollo y resultados</h1>
+    <h2>Avance del proyecto</h2>
+    <p>La primera versión fue una aplicación de cafetería con tres apartados. Sirvió para practicar las estructuras de datos con operaciones sencillas antes de desarrollar el gestor de comandas.</p>
+    <ul>
+      <li><b>Clientes:</b> se podían agregar personas a una fila, mostrar quiénes esperaban y atender a la primera en llegar. Se utilizó una cola FIFO.</li>
+      <li><b>Compras:</b> se registraban productos vendidos en un historial y se podía quitar la última compra. Se utilizó una pila LIFO.</li>
+      <li><b>Inventario:</b> se guardaban productos con su cantidad, se buscaban por nombre o ID y se mostraba la lista. Se utilizó una tabla hash.</li>
+    </ul>
+    <p>Con ese avance se comprobaron las operaciones básicas de agregar, retirar y consultar datos. En la versión final el proyecto pasó a organizar comandas, asignarlas a baristas y controlar el orden de preparación.</p>
+    <h2>Funciones de la versión final</h2>
+    <ul>
+      <li>Registrar comandas con folio, prioridad, fecha, tiempo estimado y estado.</li>
+      <li>Registrar baristas y asignarles trabajo según su estación y capacidad.</li>
+      <li>Consultar comandas y baristas por folio, ordenar listados y filtrar resultados.</li>
+      <li>Respetar requisitos previos entre tareas y mostrar estadísticas básicas.</li>
+    </ul>
+    <h2>Algoritmos aplicados</h2>
+    <p>Se usaron merge sort para ordenar, búsqueda binaria para localizar tareas en una lista ordenada, recursividad para estadísticas y orden topológico para las dependencias.</p>
+    <h2>Resultado</h2>
+    <p>La aplicación tiene cinco vistas: panel de barra, comandas y tareas, equipo de baristas, preparación previa y consulta rápida. Las pruebas del sistema terminaron correctamente con 23 comprobaciones aprobadas.</p>
+    <p>Los datos se guardan en memoria mientras la aplicación está abierta. Al cerrarla, se reinician.</p>
+  </section>
+
+  <section class="page">
+    <h1>Capturas de la aplicación</h1>
+    <div class="screens">
+      <figure><img src="capturas/panel-barra.png"><figcaption>Panel de barra</figcaption></figure>
+      <figure><img src="capturas/comandas-tareas.png"><figcaption>Comandas y tareas</figcaption></figure>
+      <figure><img src="capturas/equipo-baristas.png"><figcaption>Equipo de baristas</figcaption></figure>
+      <figure><img src="capturas/preparacion-previa.png"><figcaption>Preparación previa</figcaption></figure>
+    </div>
+    <figure class="single"><img src="capturas/consulta-rapida.png" style="display:block;width:100%;border:1px solid #aaa"><figcaption class="caption">Consulta rápida</figcaption></figure>
+  </section>
+</body>
+</html>
